@@ -18,6 +18,7 @@ void setup() {
   setupUltraSonicRangeSensor();
   setupDriveMotor(); 
   setupSteeringMotor();
+  setupLcd();
 }
 
 
