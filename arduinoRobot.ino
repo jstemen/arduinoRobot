@@ -11,7 +11,7 @@
 
 #define goPin 11
 
-
+static int angle = 2000;
 
 void setup() {
   Serial.begin (9600);
@@ -19,6 +19,7 @@ void setup() {
   setupDriveMotor(); 
   setupSteeringMotor();
   setupLcd();
+  setupServo();
 }
 
 
@@ -31,4 +32,7 @@ void loop() {
     seekSteer();
     idle();
   }
+  angle = -1 * angle;
+  turnServo(angle);
+  delay(4000);
 }
