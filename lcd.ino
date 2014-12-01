@@ -38,23 +38,20 @@ void setupLcd()   /*----( SETUP: RUNS ONCE )----*/
     delay(250);
   }
   lcd.backlight(); // finish with backlight on  
-
+  
   lcd.setCursor(0,0); //Start at character 0 on line 0
   printMsg("LCD is sucessfully initalized.");   
-
-  lcd.setCursor(0,0);
-
 }/*--(end setup )---*/
 
 
 void printMsg( char msg[]){
-  int length =  sizeof(i)/sizeof(i[0]);
-  for(int i = 0; i< length; i+16=i){
-    lcd.setCursor(0,0);
-   // char[] subArray = subArray(msg,i,i+16);
-    lcd.print(msg);
-  }
-
+//  int length =  sizeof(msg)/sizeof(msg[0]);
+//  for(int i = 0; i< length; i++){
+//    lcd.setCursor(0,0);
+//   // char[] subArray = subArray(msg,i,i+16);
+//    lcd.print(msg);
+//  }
+  lcd.clear();
   lcd.print(msg); 
 }
 //

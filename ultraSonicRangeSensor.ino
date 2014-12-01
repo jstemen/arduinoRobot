@@ -11,7 +11,7 @@ int getDistance(){
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);
   distance = (duration/2) / 29.1;
-  Serial.println("Distance is: " + distance);
+  //printMsg("Distance is: " + distance);
   return distance;
 }
 

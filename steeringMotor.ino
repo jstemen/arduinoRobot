@@ -13,10 +13,10 @@ void seekSteer() {
   short dir = turnPosition / abs(turnPosition);
   if (abs(turnPosition) >= maxSteps) {
     turnPosition = dir * -1;
-    Serial.println("Reached max step range, reversing.");
+    printMsg("Reached max step range, reversing.");
   } else {
     turnPosition = turnPosition + dir;
-    Serial.println("Max range not hit.  Increasing to " + turnPosition);
+    //printMsg("Max range not hit.  Increasing to " + turnPosition);
   }
   myStepper.step(turnPosition);
 }
